@@ -21,6 +21,10 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* HEADER */
 
@@ -46,5 +50,87 @@ header .logo {
     top: 0;
     bottom: 0;
     left: 0;
+    margin: auto;
+    display: none;
+}
+
+header .sub-menu {
+    display: flex;
+}
+
+header .sub-menu ul.menu {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+header .sub-menu ul.menu li {
+    position: relative;
+}
+
+
+/* 가상요소를 추가하는 것이다. 가상요소는 기본적으로 inline요소이다. */
+
+header .sub-menu ul.menu li::before {
+    /* content라는 값이 없으면, before라는 가상요소는 만들어지지 않는다. */
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    /* absolute의 값이 있으면, 자동적으로 block 요소로 변경이된다. */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+
+/* 가상 클래스 선택자를 설정하는 것 처음의  */
+
+header .sub-menu ul.menu li:first-child::before {
+    display: none;
+}
+
+header .sub-menu ul.menu li a {
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+    color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+    color: #000000;
+}
+
+header .sub-menu .search {
+    position: relative;
+    height: 34px;
+}
+
+header .sub-menu .search input {
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777777;
+    font-size: 12px;
+    /* 변환효과를 저장하는 것 가로의 값이 변환하는 속도를 지정해준 것이다. */
+    transition: width .4s;
+}
+
+header .sub-menu .search input:focus {
+    width: 190px;
+    border-color: #669900;
+}
+
+header .sub-menu .search .material-icons {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
     margin: auto;
 }

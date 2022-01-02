@@ -1,3 +1,50 @@
+/* COMMON */
+
 body {
+    color: #333333;
+    /* 기본적으로 16px로 사용을 한다 */
+    font-size: 16px;
+    /* 글자의 두께를 400으로 지정하는 것 */
+    font-weight: 400;
+    /* 통상적인 1.4배로 사용을 하겟다는 의미 (행간 제공) */
+    line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* image가 현재 75px 이다. image 는 inline 요소이다. */
+
+
+/* inline 요소는 기본적으로 baseline이라는 것을 바탕으로 그려진다 따라서 아래 여백이 생길 수 있다. */
+
+img {
+    display: block;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: royalblue;
+}
+
+header .inner {
+    width: 1100px;
+    height: 120px;
+    /* 좌우만 자동으로 동작하게 변경을 해주는 것 중앙 정렬 - header에 중앙 정렬하는 것 */
+    margin: 0 auto;
+    background-color: orange;
+    /* position에 대한 부모요소를 설정을 해주는 것 */
+    position: relative;
+}
+
+header .logo {
+    /* 위아래의 값을 알아야 가운데 배치가 가능하다. */
+    height: 75px;
+    /* 구조적인 부모의 요소에 대해서 absolute로 배치를 시키겠다는 의미이다. */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }

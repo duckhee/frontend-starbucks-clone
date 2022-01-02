@@ -131,6 +131,6 @@ header .sub-menu .search .material-icons {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 15px;
     margin: auto;
+    right: 5px;
 }

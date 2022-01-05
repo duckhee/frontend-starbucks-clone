@@ -51,7 +51,6 @@ header .logo {
     bottom: 0;
     left: 0;
     margin: auto;
-    display: none;
 }
 
 header .sub-menu {
@@ -133,4 +132,12 @@ header .sub-menu .search .material-icons {
     bottom: 0;
     margin: auto;
     right: 5px;
+    transition: .4s;
+}
+
+
+/* search 부분에 focused 가 되었을 경우 동작 */
+
+header .sub-menu .search.focused .material-icons {
+    opacity: 0;
 }

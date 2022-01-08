@@ -46,42 +46,46 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!-- header -->
     <header>
         <div class="inner">
-            <a class="logo" href="/">
-                <img src="./images/starbucks_logo.png" alt="starbucks logo">
+            <a href="/" class="logo">
+                <!-- image tag는 inline 요소이다. 따라서 가로, 세로, 마진, 패딩 값을 가질 수 없다. inline 요소는 baseline을 가진다. -->
+                <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
             </a>
-
+            <!-- ./logo -->
             <div class="sub-menu">
                 <ul class="menu">
                     <li>
-                        <a href="/signin">Sign In</a>
+                        <a href="#/sign-in">Sign In</a>
                     </li>
+                    <!-- ./sign-in -->
                     <li>
                         <a href="javascript:void(0)">My Starbucks</a>
-                        <!-- 자바스크립의 void 함수를 호출하는 것을 의미한다. 아무런 기능 하지 않는다. -->
                     </li>
+                    <!-- ./starbucks -->
                     <li>
-                        <a href="#">Customer Service & Ideas</a>
+                        <a href="javascript:void(0)">Customer Service & ideas</a>
                     </li>
+                    <!-- ./customer service -->
                     <li>
-                        <a href="#">Find a Store</a>
+                        <a href="javascript:void(0)">Find a Store</a>
                     </li>
+                    <!-- ./find store -->
                 </ul>
+                <!-- ./menu -->
                 <div class="search">
                     <input type="text" />
+                    <!-- ./search input -->
                     <span class="material-icons">search</span>
-                    <!-- ./SEARCH-ICON -->
+                    <!-- ./search-icon -->
                 </div>
-                <!-- ./SEARCH-MENU -->
+                <!-- ./search -->
             </div>
-            <!-- ./SUB-MENU -->
+            <!-- ./sub-menu -->
         </div>
-        <!-- ./Inner-menu  -->
     </header>
-    <!-- header 정의 -->
-    <!-- ./HEADER -->
+    <!-- ./header -->
 
 </body>
 

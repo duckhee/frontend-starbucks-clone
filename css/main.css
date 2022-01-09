@@ -41,6 +41,80 @@ a {
 }
 
 
+/* button을 공통으로 사용하기 위한 공통 값 정의 */
+
+
+/* 클래스가 하나가 사용이 되어 있으니깐 우선 순위가 낮다. */
+
+.btn {
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    /* .4초만큼 전한효과를 주기위한 설정 */
+    transition: .4s;
+}
+
+
+/* button focus 효과 */
+
+.btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+/* 클래스가 두개가 있으므로 우선 순위가 높다. */
+
+.btn.btn--reverse {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.btn.btn--reverse:hover {
+    /* 투명값을 의미한다. */
+    background-color: transparent;
+    color: #333333;
+}
+
+.btn.btn--brown {
+    color: #592B18;
+    border-color: #592B18;
+}
+
+.btn.btn--brown:hover {
+    color: #ffffff;
+    background-color: #592B18;
+}
+
+.btn.btn--gold {
+    color: #D9AA8A;
+    border-color: #D9AA8A;
+}
+
+.btn.btn--gold:hover {
+    color: #ffffff;
+    background-color: #D9AA8A;
+}
+
+.btn.btn--white {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn.btn--white:hover {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+
 /* HEADER */
 
 header {
@@ -52,6 +126,8 @@ header {
     /* position의 값이 absolute, fixed(위치상의 부모요소가 될수있다.)는 가로의 값을 최소한으로 사용을 할려고 한다. */
     position: fixed;
     top: 0;
+    /* badge를 최상단으로 하기 위해서 header를 최 상단으로 하기 위해서 설정 */
+    z-index: 9;
 }
 
 
@@ -306,4 +382,70 @@ header .badges .badge {
     /* rgb(red, green, blue, alpha) 값을 가지는 css 함수이다. */
     box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.15);
     cursor: pointer;
+}
+
+
+/* VISUAL Section */
+
+.visual {
+    /* header의 높이 값만큼 위에 값을 띄우기 위해서  */
+    margin-top: 120px;
+    background-image: url("../images/visual_bg.jpg");
+    /* background image 를 중앙에 위치하도록 설정하기 위한것 */
+    background-position: center;
+}
+
+.visual .inner {
+    height: 646px;
+}
+
+
+/* 구조를 생성하기 위해서 사용한 중간의 값은 생략을 해주기도 한다. */
+
+.visual .title {
+    /* button의 구조적 부모요소가 된다. 구조적 부모요소는 position 값이 있을 경우, 상위 position의 값을 부모 요소로 가진다. */
+    position: absolute;
+    top: 88px;
+    left: -10px;
+}
+
+.visual .title .btn {
+    position: absolute;
+    top: 259px;
+    left: 173px;
+}
+
+.visual .cup1.image {
+    position: absolute;
+    right: -47px;
+    bottom: 0;
+}
+
+.visual .cup1.text {
+    position: absolute;
+    top: 38px;
+    right: 171px;
+}
+
+.visual .cup2.image {
+    position: absolute;
+    bottom: 0;
+    right: 162px;
+}
+
+.visual .cup2.text {
+    position: absolute;
+    top: 321px;
+    right: 416px;
+}
+
+.visual .spoon {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+}
+
+.visual .fade-in {
+    /* 투명도 0의 값을 가지도록 한다. */
+    opacity: 0;
 }

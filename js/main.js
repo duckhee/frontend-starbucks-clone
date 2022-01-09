@@ -53,3 +53,14 @@ window.addEventListener("scroll", _.throttle(function() {
     }
 }, 300));
 // _.throttle(function(), delay time);
+
+// fade-in이라는 모든 요소의 값을 가져온다. .visual class 안에 잇는 fade-in class를 가진 요소를 가져온다.
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+// forEach로 값을 가져오는 것
+fadeEls.forEach(function(fadeEl, index) {
+    // gsap.to(요소, 지속시간, 옵션);
+    gsap.to(fadeEl, 1, {
+        delay: (index + 1) * .7,
+        opacity: 1
+    });
+});

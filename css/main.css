@@ -9,6 +9,7 @@ body {
     /* 통상적인 1.4배로 사용을 하겠다는 의미 (행간 제공) */
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
+    height: 3000px;
 }
 
 
@@ -43,8 +44,14 @@ a {
 /* HEADER */
 
 header {
+    width: 100%;
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
+    /* badge를 absolute 설정하기 위한 부모 요소를 position설정 */
+    /* position: relative; */
+    /* position의 값이 absolute, fixed(위치상의 부모요소가 될수있다.)는 가로의 값을 최소한으로 사용을 할려고 한다. */
+    position: fixed;
+    top: 0;
 }
 
 
@@ -146,6 +153,8 @@ header .sub-menu .search input {
     padding: 4px 10px;
     border: 1px solid #ccc;
     /* 요소의 크기 기준을 현재 지정한 width, height 값을 유지하도록 설정을 해주는 것이다. */
+    /* 요소의 내용 + padding + border로 크기를 계산을 한다. - border-box */
+    /* 요소의 내용을 가지고 크기를 계산한다. - content-box */
     box-sizing: border-box;
     border-radius: 5px;
     outline: none;
@@ -278,4 +287,23 @@ header .main-menu .item .item__contents .contents__texture p {
     color: #669900;
     /* 값이 샂 중하로 구분하면된다. */
     margin: 4px 0 14px;
+}
+
+header .badges {
+    position: absolute;
+    top: 132px;
+    right: 12px;
+}
+
+header .badges .badge {
+    /* border를 둥글게 해주는 것 */
+    border-radius: 10px;
+    /* 이미지가 박스보다 클 경우, 박스만큼만 보이게 해주는 것 */
+    overflow: hidden;
+    /* 사이사이의 간격을 넣는 것 */
+    margin-bottom: 12px;
+    /* 박스의 그림자 효과를 넣는 것(값은 x, y, blur의 값이다) */
+    /* rgb(red, green, blue, alpha) 값을 가지는 css 함수이다. */
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.15);
+    cursor: pointer;
 }

@@ -24,3 +24,11 @@ searchInputEl.addEventListener("blur", function() {
     // html 속성을 추가 해주는 것 
     searchInputEl.setAttribute("placeholder", "");
 });
+
+// badges의 선택자 현재 scroll 시 badges를 사라지게 하기 위해서 선택자를 가지고 온다.
+const badgeEl = document.querySelector("header .badges");
+
+// window는 현재 브라우저의 하나의 탭을 의미한다. 화면 자체라고 이해를 해도된다.
+window.addEventListener("scroll", function() {
+    console.log("scroll!");
+});

@@ -603,3 +603,67 @@ header .badges .badge {
     left: 0;
     right: 0;
 }
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet {
+    /* 배경 색상을 사용하지 않겠다는 설정이다. */
+    background-color: transparent;
+    background-image: url("../images/promotion_slide_pager.png");
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    /* border의 바깥 외곽선을 사용하지 않겠다는 설정 */
+    outline: none;
+}
+
+
+/* pagination의 마지막 자식 요소 선택 */
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+}
+
+
+/* 지금활성화된 슬라이드 */
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+    background-image: url("../images/promotion_slide_pager_on.png");
+}
+
+
+/* 다중 선택자를 사용하는 것이다. 쉼표를 이용해서 사용하는 것이다. */
+
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.notice .promotion .swiper-prev {
+    left: 50%;
+    margin-left: -480px;
+}
+
+.notice .promotion .swiper-next {
+    right: 50%;
+    margin-right: -480px;
+}
+
+
+/* hover setting */
+
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
+    background-color: #333333;
+    color: #ffffff;
+}

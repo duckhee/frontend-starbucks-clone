@@ -456,6 +456,7 @@ header .badges .badge {
 .notice {}
 
 .notice .notice-line {
+    /* 높이 값이 기본 값이 auto이고 최대한 작아질려고 하기 때문에 inner의 높이 값을 가지게 된다. */
     position: relative;
 }
 
@@ -478,5 +479,76 @@ header .badges .badge {
 }
 
 .notice .notice-line .inner {
-    height: 200px;
+    height: 62px;
+    /* 자식요소들을 수평으로 만들기 위한 flex 설정 */
+    display: flex;
+}
+
+.notice .notice-line .inner .inner__left {
+    width: 60%;
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    /* 수직 정렬을 의미해준다. */
+    align-items: center;
+}
+
+.notice .notice-line .inner .inner__left h2 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.notice .notice-line .inner .inner__left .swiper-container {
+    height: 62px;
+    background-color: orange;
+    /* 최대한 값을 가지도록 하게 해주는 것이다. flex일 경우 사용이 가능하다. */
+    flex-grow: 1;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    /* 수평 가운데 위치하도록 설정 해주는 것이다. */
+    justify-content: center;
+    /* 수직 가운데 위치하도록 설정 해주는 것이다. */
+    align-items: center;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more .material-icons {
+    color: #ffffff;
+    /* icon의 기본 크기는 24px이다. */
+    font-size: 30px;
+}
+
+.notice .notice-line .inner .inner__right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    /* 오른쪽 정렬을 해주는 것이다. */
+    justify-content: flex-end;
+    /* 수직 가운데 정렬 하는 것이다. */
+    align-items: center;
+}
+
+.notice .notice-line .inner .inner__right h2 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.notice .notice-line .inner .inner__right .toggle-promotion {
+    width: 62px;
+    width: 62px;
+    cursor: pointer;
+    display: flex;
+    /* 수평 가운데 위치하도록 설정 해주는 것이다. */
+    justify-content: center;
+    /* 수직 가운데 위치하도록 설정 해주는 것이다. */
+    align-items: center;
+}
+
+.notice .notice-line .inner .inner__right .toggle-promotion .material-icons {
+    font-size: 30px;
 }

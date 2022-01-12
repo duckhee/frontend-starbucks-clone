@@ -568,8 +568,17 @@ header .badges .badge {
     height: 693px;
     background-color: #f6f5ef;
     position: relative;
+    /* toggle시 위 아래로 생성되는 것을 딜레이 주기 위한 설정 */
+    transition: height .4s;
     /* horizontal 넘치는 현상 막기 위한 설정  */
     overflow: hidden;
+}
+
+
+/* 일치 제어자를 사용하여 .promotion과 .hide가 같이 있는 상태를 정의 해준다. */
+
+.notice .promotion.hide {
+    height: 0;
 }
 
 .notice .promotion .swiper-container {

@@ -91,3 +91,23 @@ new Swiper('.promotion .swiper-container', {
         nextEl: '.promotion .swiper-next'
     }
 });
+
+// get .promotion class element
+const promotionEl = document.querySelector(".promotion");
+// get .toggle-promotion class element
+const togglePromotionEl = document.querySelector(".toggle-promotion");
+
+// 값 변경이 가능하게 하기 위해서 let으로 선언
+let isHidePromotion = false;
+// toggle 기능 추가
+togglePromotionEl.addEventListener("click", function() {
+    // 현재 값을 반전 값으로 변환을 해준다.
+    isHidePromotion = !isHidePromotion;
+    if (isHidePromotion) {
+        // class 요소에 해당 값 추가
+        promotionEl.classList.add("hide");
+    } else {
+        // class 요소에 해당 값 삭제
+        promotionEl.classList.remove("hide");
+    }
+});

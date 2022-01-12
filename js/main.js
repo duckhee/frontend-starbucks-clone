@@ -68,6 +68,26 @@ fadeEls.forEach(function(fadeEl, index) {
 // swiper setting
 new Swiper('.notice-line .swiper-container', {
     direction: 'vertical', // 화면 전환이 위아래로 진행이 된다는 것
-    // autoplay: true, // 자동 재생 설정
-    // loop: true // 반복적으로 동작하게 하기 위한 설정
+    autoplay: true, // 자동 재생 설정
+    loop: true // 반복적으로 동작하게 하기 위한 설정
+});
+
+// swiper setting
+new Swiper('.promotion .swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 3, // 한번에 3개의 슬라이드를 보여주겠다는 것
+    spaceBetween: 10, // 좌우 10px 만큼의 띄워주겠다는 것
+    centeredSlides: true, // 중앙에서 보여주겠다는 것
+    loop: true,
+    autoplay: {
+        delay: 5000 // ms delay 설정
+    },
+    pagination: {
+        el: '.promotion .swiper-pagination', // paging 처리를 위한 선택자
+        clickable: true // click이 사용 가능한지 사용자의 페이지 번호 요소 제어 가능 여부 
+    },
+    navigation: {
+        prevEl: '.promotion .swiper-prev',
+        nextEl: '.promotion .swiper-next'
+    }
 });

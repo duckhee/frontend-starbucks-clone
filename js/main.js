@@ -64,3 +64,10 @@ fadeEls.forEach(function(fadeEl, index) {
         opacity: 1
     });
 });
+
+// swiper setting
+new Swiper('.notice-line .swiper-container', {
+    direction: 'vertical', // 화면 전환이 위아래로 진행이 된다는 것
+    // autoplay: true, // 자동 재생 설정
+    // loop: true // 반복적으로 동작하게 하기 위한 설정
+});

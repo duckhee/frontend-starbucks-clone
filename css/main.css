@@ -502,9 +502,19 @@ header .badges .badge {
 
 .notice .notice-line .inner .inner__left .swiper-container {
     height: 62px;
-    background-color: orange;
     /* 최대한 값을 가지도록 하게 해주는 것이다. flex일 경우 사용이 가능하다. */
     flex-grow: 1;
+}
+
+.notice .notice-line .inner .inner__left .swiper-container .swiper-slide {
+    height: 62px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.notice .notice-line .inner .inner__left .swiper-container .swiper-slide a {
+    color: #ffffff;
 }
 
 .notice .notice-line .inner .inner__left .notice-line__more {

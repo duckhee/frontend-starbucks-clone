@@ -10,6 +10,7 @@ body {
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
     height: 3000px;
+    width: 100%;
 }
 
 
@@ -567,6 +568,8 @@ header .badges .badge {
     height: 693px;
     background-color: #f6f5ef;
     position: relative;
+    /* horizontal 넘치는 현상 막기 위한 설정  */
+    overflow: hidden;
 }
 
 .notice .promotion .swiper-container {

@@ -449,3 +449,34 @@ header .badges .badge {
     /* 투명도 0의 값을 가지도록 한다. */
     opacity: 0;
 }
+
+
+/* section notice */
+
+.notice {}
+
+.notice .notice-line {
+    position: relative;
+}
+
+.notice .notice-line .bg-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #333333;
+}
+
+.notice .notice-line .bg-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f6f5ef;
+}
+
+.notice .notice-line .inner {
+    height: 200px;
+}

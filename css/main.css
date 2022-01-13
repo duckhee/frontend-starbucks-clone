@@ -9,8 +9,7 @@ body {
     /* 통상적인 1.4배로 사용을 하겠다는 의미 (행간 제공) */
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
-    height: 3000px;
-    width: 100%;
+    height: 6000px;
 }
 
 
@@ -787,4 +786,130 @@ header .badges .badge {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+
+/*  */
+
+.youtube .inner {
+    height: 700px;
+}
+
+.youtube .floating1 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.youtube .floating2 {
+    position: absolute;
+    top: 350px;
+    left: 150;
+}
+
+
+/* 
+.youtube .floating3 {
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+} */
+
+
+/* season product */
+
+.season-product {
+    background-image: url("../images/season_product_bg.jpg");
+}
+
+.season-product .inner {
+    height: 400px;
+}
+
+.season-product .floating3 {
+    position: absolute;
+    top: -200px;
+    right: 0;
+}
+
+.season-product .text-group {
+    position: absolute;
+    top: 110px;
+    right: 100px;
+}
+
+.season-product .text-group .title {
+    margin-bottom: 10px;
+}
+
+.season-product .text-group .description {
+    margin-bottom: 15px;
+}
+
+.season-product .text-group .more {}
+
+
+/* reserve coffee */
+
+.reserve-coffee {
+    background-image: url("../images/reserve_bg.jpg");
+}
+
+.reserve-coffee .inner {
+    height: 400px;
+}
+
+.reserve-coffee .reserve-logo {
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.reserve-coffee .text-group {
+    position: absolute;
+    top: 124px;
+    left: 208px;
+}
+
+.reserve-coffee .product {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* Pick your Favorite */
+
+.pick-your-favorite {
+    background-image: url("../images/favorite_bg.jpg");
+    /* 배경 이미지의 경우 자동으로 반복이 되는데 반복으로 하지 않겠다는 설정 */
+    background-repeat: no-repeat;
+    /* 배경 이미지의 위치를 중앙에 위치한다는 설정 */
+    background-position: center;
+    /* 배경을 요소가 스크롤 될 때 따라서 움직이게 설정하지 않는다는 설정 */
+    background-attachment: fixed;
+    /* view port의 넓은 넓이의 배경 이미지에 맞춰서 보여지게 된다. */
+    background-size: cover;
+}
+
+.pick-your-favorite .inner {
+    padding: 110px 0;
+}
+
+.pick-your-favorite .text-group {
+    margin-left: 100px;
+    width: 362px;
+    display: flex;
+    /* 수평정렬을 넘어 간다면, 줄 바꿈을 허용하여 정리하는 것 */
+    flex-wrap: wrap;
+    /* 우측 정렬하는 것 */
+    justify-content: flex-end;
+}
+
+.pick-your-favorite .text-group .title {
+    margin-bottom: 40px;
+}
+
+.pick-your-favorite .text-group .description {
+    margin-bottom: 40px;
 }

@@ -111,3 +111,25 @@ togglePromotionEl.addEventListener("click", function() {
         promotionEl.classList.remove("hide");
     }
 });
+
+// 
+function random(min, max) {
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
+
+// floating object video icon function
+function floatingObject(selector, delay, size) {
+    // animation 
+    gsap.to(selector, random(1.5, 2.5), {
+        y: size, // y축에 이동하는 범위 설정
+        repeat: -1, // 무한 반복하기 위한 것
+        yoyo: true, // 위에서 아래로 아래에서 위로 올라가는 효과를 추가하는 것
+        ease: Power1.easeInout, // ease 및 Timing 옵션으로 애니메이션의 효과를 조정 가능
+        delay: random(0, delay)
+    });
+}
+
+
+floatingObject(".floating1", 1, 15);
+floatingObject(".floating2", 0.5, 15);
+floatingObject(".floating3", 1.5, 20);

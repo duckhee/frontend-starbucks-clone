@@ -118,6 +118,28 @@ a {
 }
 
 
+/* COMMON ANIMATION */
+
+.back-to-position {
+    opacity: 0;
+    transition: 1s;
+}
+
+.back-to-position.to-right {
+    /* 수평으로 -150px로 이동을 시키는 것이다. */
+    transform: translateX(-150px);
+}
+
+.back-to-position.to-left {
+    transform: translateX(150px);
+}
+
+.show .back-to-position {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 /* HEADER */
 
 header {

@@ -141,8 +141,8 @@ spyEls.forEach(function(spyEl) {
     new ScrollMagic
         .Scene({
             triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 입력 해주면된다.
-            triggerHook: .8 // 
+            triggerHook: .8 // scroll을 감지할 위치를 0.8 부분에서 감지를 시작하겠다는 것
         })
-        .setClassToggle()
-        .addTo();
+        .setClassToggle(spyEl, 'show')
+        .addTo(new ScrollMagic.Controller());
 });

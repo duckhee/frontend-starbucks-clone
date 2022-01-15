@@ -139,6 +139,23 @@ a {
     transform: translateX(0);
 }
 
+.show .back-to-position.delay-0 {
+    /* 전환효과를 delay를 주어서 실행을 시킨다는 것 */
+    transition-delay: 0s;
+}
+
+.show .back-to-position.delay-1 {
+    transition-delay: .3s;
+}
+
+.show .back-to-position.delay-2 {
+    transition-delay: .6s;
+}
+
+.show .back-to-position.delay-3 {
+    transition-delay: .9s;
+}
+
 
 /* HEADER */
 

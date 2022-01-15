@@ -913,3 +913,130 @@ header .badges .badge {
 .pick-your-favorite .text-group .description {
     margin-bottom: 40px;
 }
+
+
+/* RESERVE STORe */
+
+.reserve-store {
+    background-image: url("../images/reserve_store_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 배경이 따라서 이동하지 않도록 설정해주는 것 */
+    background-attachment: fixed;
+    /* 배경의 크기를 더  넓은 값으로 출력하게 설정 해주는 것 */
+    background-size: cover;
+}
+
+.reserve-store .inner {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* medal 3d transform */
+
+.reserve-store .medal {
+    width: 334px;
+    height: 334px;
+    /* 원근 값을 주기 위해서 카메라 위치를 변경 값이 크면 클수록 멀리서 보는 느낌이 난다. */
+    perspective: 600px;
+}
+
+
+/* 공통으로 정의할 클래스 다중 선택자 */
+
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+    width: 334px;
+    height: 334px;
+    position: absolute;
+    /* 뒤집어져 있는 요소를 안 보여주기 위한 설정 */
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.reserve-store .medal .front {
+    /* 명시적으로 회전을 시키지 않는다고 설정 하는 부분 */
+    transform: rotateY(0deg);
+}
+
+.reserve-store .medal:hover .front {
+    transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back {
+    /* 180도로 뒤집는 것 */
+    transform: rotateY(-180deg);
+}
+
+.reserve-store .medal:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+/* button */
+
+.reserve-store .medal .back .btn {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* FIND STORE */
+
+.find-store {
+    background-image: url("../images/find_store_bg.jpg");
+}
+
+.find-store .inner {
+    height: 400px;
+}
+
+.find-store .texture1 {
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+
+.find-store .texture2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.find-store .picture {
+    position: absolute;
+    /* image를 동그라미로 만들기 위한 것 */
+    border-radius: 50%;
+    /* 그림자 생성 */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.find-store .picture1 {
+    top: -60px;
+    left: 0;
+}
+
+.find-store .picture2 {
+    top: 150px;
+    left: 250px;
+}
+
+.find-store .text-group {
+    position: absolute;
+    top: 120px;
+    left: 550px;
+}
+
+.find-store .text-group .title {
+    margin-bottom: 20px;
+}
+
+.find-store .text-group .description {
+    margin-bottom: 20px;
+}

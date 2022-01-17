@@ -92,6 +92,19 @@ new Swiper('.promotion .swiper-container', {
     }
 });
 
+// awards swiper setting
+new Swiper(".awards .swiper-container", {
+    direction: 'horizontal', // 수평 슬라이드 설정
+    autoplay: true, // 자동으로 실행이 되도록 해주는 옵션
+    loop: true, // 반복 실행을 할 것이지에 대한 설정
+    spaceBetween: 30, // 시아 간격을 30px로 설정하는 옵션
+    slidesPerView: 5, // 몇개의 슬라이드를 보여줄 것인지 설정 하는 부분 한 화면에 5개의 slide가 보이게 된다.
+    navigation: {
+        prevEl: '.awards .swiper-prev',
+        nextEl: '.awards .swiper-next'
+    }
+});
+
 // get .promotion class element
 const promotionEl = document.querySelector(".promotion");
 // get .toggle-promotion class element

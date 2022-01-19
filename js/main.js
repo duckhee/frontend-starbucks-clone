@@ -27,7 +27,8 @@ searchInputEl.addEventListener("blur", function() {
 
 // badges의 선택자 현재 scroll 시 badges를 사라지게 하기 위해서 선택자를 가지고 온다.
 const badgeEl = document.querySelector("header .badges");
-
+// ID select 
+const toTopEl = document.querySelector("#to-top");
 // window는 현재 브라우저의 하나의 탭을 의미한다. 화면 자체라고 이해를 해도된다.
 // _.throttle()은 lodash의 라이브러리 함수이다. 0.3초의 부하를 주어서 실행을 하겠다는 것이다.
 window.addEventListener("scroll", _.throttle(function() {
@@ -42,6 +43,10 @@ window.addEventListener("scroll", _.throttle(function() {
             opacity: 0,
             display: 'none'
         });
+        // 최상단으로 이동하는 기능을 구현한 함수 보이는 상태
+        gsap.to(toTopEl, .2, {
+            x: 0
+        });
     } else {
         //badge display 
         // badgeEl.style.display = 'block';
@@ -50,9 +55,20 @@ window.addEventListener("scroll", _.throttle(function() {
             opacity: 1,
             display: 'block'
         });
+        // 최상단으로 이동하는 기능을 구현한 함수 보이지 않는 상태
+        gsap.to(toTopEl, .2, {
+            x: 100
+        });
     }
 }, 300));
 // _.throttle(function(), delay time);
+
+// click 이벤트 추가
+toTopEl.addEventListener('click', function() {
+    gsap.to(window, .7, {
+        scrollTo: 0
+    });
+});
 
 // fade-in이라는 모든 요소의 값을 가져온다. .visual class 안에 잇는 fade-in class를 가진 요소를 가져온다.
 const fadeEls = document.querySelectorAll(".visual .fade-in");
@@ -159,3 +175,9 @@ spyEls.forEach(function(spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
+
+// 날짜 계산하는 함수
+const thisYear = document.querySelector(".this-year");
+// 요소가 가지고 있는 글자 내용을 알아내거나 지정하는 용도로 사용이 가능하다.
+// 현재 날짜 정보를 가져오는 객체에서 값을 표현 가능하다.
+thisYear.textContent = new Date().getFullYear();

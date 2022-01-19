@@ -1130,3 +1130,146 @@ header .badges .badge {
     background-color: #ffffff;
     color: #333333;
 }
+
+
+/* FOOTER */
+
+footer {
+    background-color: #272727;
+    /* 위에 경계선을 만들기 위한 설정 */
+    border-top: 1px solid #333333;
+}
+
+footer .inner {
+    /* 위에 40px 아래에서 60px 여백 두기 위한 설정 */
+    padding: 40px 0 60px 0;
+}
+
+footer .inner .menu {
+    /* 옆으로 나열하기 위한 설정 */
+    display: flex;
+    /* 가운데 정렬 */
+    justify-content: center;
+}
+
+footer .inner .menu li {
+    /* before에 값을 넣기 위해서 설정 */
+    position: relative;
+}
+
+
+/* li 태그 전에 위치 시키기 위한 것 */
+
+footer .inner .menu li::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #555555;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    margin: auto;
+}
+
+
+/* li 태그 중의 마지막 태그의 경우  */
+
+footer .inner .menu li:last-child:before {
+    display: none;
+}
+
+footer .inner .menu li a {
+    color: #CCCCCC;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+    /* 사용자가 클릭을 할 수 있는 범위를 늘려주기 위한 것이다. */
+    display: inline-block;
+}
+
+
+/* 하이라이트를 주기 위한 것 */
+
+footer .inner .menu li a.green {
+    color: #669900;
+}
+
+
+/* FOOTER BUTTON GROUP */
+
+footer .btn-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* css 재정의 */
+
+footer .btn-group .btn {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+
+/* 버튼의 마지막 값의 margin 값을 제거 */
+
+footer .btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+footer .info {
+    margin-top: 30px;
+    /* 문자 가운데 정렬 */
+    text-align: center;
+}
+
+
+/* span은 inline 요소이다. */
+
+footer .info span {
+    margin-right: 20px;
+    color: #999999;
+    font-size: 12px;
+}
+
+footer .info span:last-child {
+    margin-right: 0;
+}
+
+footer .copyright {
+    color: #999999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+footer .logo {
+    /* 3개의 값을 가질 경우, 상 중 하로 구분을 할 수 있다. */
+    margin: 30px auto 0;
+    /* 이미지 요소가 display:block이고 margin:0 auto인 경우 width 속성이 없어도 가운데 정렬이 가능하다. */
+}
+
+
+/* to-top function */
+
+#to-top {
+    width: 42px;
+    height: 42px;
+    background-color: #333333;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    /* 중앙 정렬하기 위한 설정 */
+    justify-content: center;
+    align-items: center;
+    /* 위치를 고정하기 위한 fixed */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* 항상 위에 보이게 하기 위해서 z-index값을 높게 설정해준다. */
+    z-index: 9;
+}
